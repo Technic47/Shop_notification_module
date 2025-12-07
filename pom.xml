@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.technic47</groupId>
         <artifactId>shop-spring-boot-starter</artifactId>
-        <version>1.0.27</version>
+        <version>1.0.28</version>
     </parent>
 
     <artifactId>notification</artifactId>
@@ -38,8 +38,8 @@
 
         <dependency>
             <groupId>io.github.technic47</groupId>
-            <artifactId>data-model-dto</artifactId>
-            <version>${data-model-dto.version}</version>
+            <artifactId>data-access</artifactId>
+            <version>${data-access.version}</version>
         </dependency>
 
         <dependency>

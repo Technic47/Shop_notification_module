@@ -16,3 +16,9 @@ spring:
     consumer:
       auto-offset-reset: earliest
       group-id: ${MODULE_GROUP_ID}
+
+microservices:
+  baseUrl: ${BASE_URL}
+
+server:
+  port: 8088
