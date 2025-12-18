@@ -10,6 +10,7 @@ import ru.kuznetsov.shop.represent.dto.order.SellerNotificationDto;
 
 import java.util.Collection;
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -40,7 +41,14 @@ public class NotificationService {
         ));
     }
 
-    public Set<BucketItemDto> getBuckerItems(Notification entity) {
+    public boolean removeNotification(UUID id) {
+        if (notificationRepository.existsById(id)) {
+            notificationRepository.deleteById(id);
+            return true;
+        } else throw new RuntimeException("Notification with id " + id + " not found");
+    }
+
+    private Set<BucketItemDto> getBuckerItems(Notification entity) {
         return bucketItemService.getAllByOrderId(entity.getOrderId())
                 .stream()
                 .filter(bucket -> bucket.getOwnerId().equals(entity.getOwnerId()))
