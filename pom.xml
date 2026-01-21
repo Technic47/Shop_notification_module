@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>notification</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <name>Notification</name>
     <description>Notification</description>
 
